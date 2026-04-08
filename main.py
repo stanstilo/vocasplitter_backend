@@ -49,17 +49,18 @@ class StatusResponse(BaseModel):
 # === App ===
 app = FastAPI()
 
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        #"http://localhost:5173",
-        #"http://127.0.0.1:5173",
+        "https://www.vocasplitter.com",
         "https://vocasplitter.com",
-        "https://www.vocasplitter.com"
     ],
-    allow_credentials=True,
+    allow_credentials=False,       # must be False when using wildcard methods/headers
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["*"],
+    max_age=86400,
 )
 
 executor = ThreadPoolExecutor(max_workers=2)
