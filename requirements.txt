@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+spleeter
+librosa
+soundfile
+numpy
+python-multipart
