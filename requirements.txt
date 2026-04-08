@@ -3,5 +3,5 @@ uvicorn
 spleeter
 librosa
 soundfile
-numpy
+numpy>=1.26.0
 python-multipart
